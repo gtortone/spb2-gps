@@ -24,3 +24,19 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 |GLONASS CORRECTIONS DATUM|byte|map<br/>0:PZ90<br/>1:PZ90.02|0|Glonass datum for RTCM2 corrections|
 |AUTONOMOUS DIFFERENTIAL ENGINE MODE|byte|map<br/>0:least squares<br/>1:Kalman filter<br/>2:Kalman filter with SBAS+|0|Filter selection|
 |RECEIVER MOTION|byte|map<br/>0:Kinematic<br/>1:Human portable<br/>2:Mapping vehicle<br/>3:Off-road vehicle<br/>4:Heavy equipment<br/>5:Farm equipment<br/>6:Airborne rotor<br/>7:Airborne fixed wing<br/>8:Marine<br/>9:Rail<br/>11:Automotive<br/>33:Static|11|Receiver motion|
+|RTK PROPAGATION LIMIT|byte|map<br/>10:10 seconds<br/>20:20 seconds<br/>40:40 seconds<br/>60:60 seconds<br/>120:120 seconds<br/>|20|RTK propagation limit|
+
+### Serial Port
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SERIAL PORT INDEX|byte|map<br/>0:Serial port COM1<br/>1:Serial port COM2|-|The number of serial port to configure|
+|BAUD RATE|byte|map<br/>0:9600 baud<br/>1:2400 baud<br/>2:4800 baud<br/>4:19200 baud<br/>5:38400 baud<br/>6:57600 baud<br/>7:115200 baud<br/>8:300 baud<br/>9:600 baud<br/>10:1200<br/>11:230000 baud<br/>12:460000 baud|7|Data transmission rate|
+|PARITY|byte|map<br/>0:No parity<br/>1:Odd parity<br/>2:Even parity|0|Parity in transmission|
+
+
+
+
+
+
+
