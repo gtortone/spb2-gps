@@ -76,7 +76,9 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 |item name|type|constraint|default value|description|
 |-|-|-|-|-|
 |OUTPUT MESSAGE TYPE|byte|map<br/>6:NMEA_GGA<br/>7:NMEA_GGK<br/>8:NMEA_ZDA<br/>11:1PPS<br/>12:NMEA_VTG<br/>13:NMEA_GST<br/>14:NMEA_PJK<br/>15:NMEA_PJT<br/>16:NMEA_VGK<br/>17:NMEA_VHD<br/>18:NMEA_GSV<br/>19:NMEA_TSN<br/>20:NMEA_TSS<br/>21:NMEA_PRC<br/>22:NMEA_REF<br/>23:NMEA_GGK_SYNC<br/>29:NMEA_AVR<br/>31:NMEA_HDT<br/>32:NMEA_ROT<br/>33:NMEA_ADV<br/>34:NMEA_PIO<br/>35:NMEA_BETA<br/>37:NMEA_VRSGGA<br/>38:NMEA_GSA<br/>40:NMEA_RMC<br/>41:NMEA_BPQ<br/>44:NMEA_GLL<br/>45:NMEA_GRS<br/>47:NMEA_LDG|-|Type of message or packet|
-
+|PORT INDEX|byte|map<br/>0:Serial port COM1<br/>1:Serial port COM2|-|Port number|
+|FREQUENCY|byte|map<br/>0:Off<br/>1:10 Hz<br/>2:5 Hz<br/>3:1 Hz<br/>4:2 seconds<br/>5:5 seconds<br/>6:10 seconds<br/>7:30 seconds<br/>8:1 minute<br/>9:5 minutes<br/>10:10 minutes<br/>11:2 Hz<br/>12:15 seconds<br/>13:20 Hz<br/>15:50 Hz<br/>|-|Frequency|
+|OFFSET|byte|range [0:255]|0|Offset in seconds from scheduled output rate|
 
 
 
