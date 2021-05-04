@@ -117,7 +117,7 @@ Each record/item has a fixed format with value constraints and they are describe
 ### GLONASS SV selection 
 
 |item name|type|constraint|default value|description|
-|-|-|-|-|-|
+|------------|-|-|-|-|
 |SV SELECTION|array[24]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..23]: 0|Enable/disable SV|
 
 ### IRNSS SV selection 
