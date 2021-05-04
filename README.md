@@ -87,7 +87,25 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 |ANTENNA HEIGHT|double|range [0:1000]|0|Vertical height of antenna in meters|
 |ANTENNA TYPE|short|map<br/>85:Zephyr (KZ)<br/>86:Zephyr Geodetic (GZ)<br/>184:Zephyr - Model 2 (KS)<br/>185:Zephyr Geodetic 2 (GS)<br/>266:AG25 (KT)<br/>309:AV59 (FA)<br/>349:AV33 (M0)<br/>403:AV34 (M1)<br/>404:AV37 (M2)<br/>406:LV59 (M3)|309|Type of antenna connected to the receiver|
 |MEASUREMENT METHOD|byte|map<br/>0:Bottom of antenna mount<br/>255:Antenna phase center|0|Measurement method|
-|ANTENNA SERIAL NUMBER|char|flstring|-|Antenna serial number|
+|ANTENNA SERIAL NUMBER|char|flstring[32]|-|Antenna serial number|
+
+### PPS Control
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|1PPS CONTROL|byte|map<br/>0:1PPS output off<br/>1:1PPS output on|1|Enable or disable 1PPS output|
+|ALWAYS ON|byte|map<br/>0:1PPS output only when time is valid<br/>1:1PPS output is always on|1|Enable or disable 1PPS always on output|
+|PULSE WIDTH|integer|range [160:10485600]|1000|Set width of 1PPS signal in ns|
+
+### Event Control
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|EVENT1 CONTROL|byte|map<br/>0:Event marker #1 disabled<br/>1:Event marker #1 enabled|0|Enable or disable event #1 marker|
+|EVENT1 TRIGGER SENSE|byte|map<br/>0:Positive trigger edge<br/>1:Negative trigger edge|0|Event #1 trigger polarity|
+|EVENT2 CONTROL|byte|map<br/>0:Event marker #2 disabled<br/>1:Event marker #2 enabled|0|Enable or disable event #2 marker|
+|EVENT2 TRIGGER SENSE|byte|map<br/>0:Positive trigger edge<br/>1:Negative trigger edge|0|Event #2 trigger polarity|
+
 
 
 
