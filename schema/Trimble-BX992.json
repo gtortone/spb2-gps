@@ -944,7 +944,7 @@
             "dataType": "byte",
             "position": 4,
             "width": 1,
-            "description": "Port number",
+            "description": "Frequency",
             "policy": "mandatory",
             "constraint": "map",
             "map": [
