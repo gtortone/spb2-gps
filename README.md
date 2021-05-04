@@ -6,6 +6,79 @@ Trimble GPS receiver can be configured through a serial link with binary format 
 The `gpsconf.py` Python script accepts a YAML (https://en.wikipedia.org/wiki/YAML) configuration file where each record is a set of
 parameters (items) to configure. Configuration items will be encoded and sent by serial link to the receiver.
 
+## Usage
+```
+gpsconf.py [-h] [--port PORT] [--speed SPEED] [--bit {7,8}]
+                  [--parity {O,E,N}] [--stop {1,2}] --file FILE [--verbose]
+
+=== Trimble BX992 configuration tool ===
+
+optional arguments:
+  -h, --help        show this help message and exit
+  --port PORT       serial port device (default: /dev/ttyUL1)
+  --speed SPEED     serial port speed (default: 115200)
+  --bit {7,8}       serial port bits (default: 8)
+  --parity {O,E,N}  serial port parity (default: N)
+  --stop {1,2}      serial port stop bits (default: 1)
+  --file FILE       configuration file (required)
+  --verbose         verbose execution with frame dump
+```
+
+## Schema of records and items
+
+Each record/item has a fixed format with value constraints and they are described in `schema/Trimble-BX992.json` file.
+
+### Value types
+
+|type name|number of bytes|
+|-|-|
+|char|1|
+|byte|1|
+|short|2|
+|integer|4|
+|float|4|
+|double|8|
+|array|n|
+
+
+### Constraints
+
+|constraint name|description|
+|-|-|
+|fixed|fixed value|
+|range|range of values (min,max)|
+|map|set of (key,value) entries|
+
+
+## Example of YAML configuration file
+
+```
+--- 
+- record: General Controls
+  ELEVATION MASK: 55
+  PDOP MASK: 12
+
+- record: Serial Port
+  SERIAL PORT INDEX: "COM1"
+  BAUD RATE: "19200"
+  PARITY: 0
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "NMEA_GGA"
+  PORT INDEX: "COM1"
+  FREQUENCY: "2s"
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "NMEA_GGA"
+  PORT INDEX: "COM2"
+  FREQUENCY: "2s"
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "1PPS"
+  PORT INDEX: "COM2"
+  FREQUENCY: "1s"
+```
+
 ## Record and item names
 
 ### General Controls
