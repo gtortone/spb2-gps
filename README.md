@@ -106,7 +106,17 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 |EVENT2 CONTROL|byte|map<br/>0:Event marker #2 disabled<br/>1:Event marker #2 enabled|0|Enable or disable event #2 marker|
 |EVENT2 TRIGGER SENSE|byte|map<br/>0:Positive trigger edge<br/>1:Negative trigger edge|0|Event #2 trigger polarity|
 
+### Reset
 
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|RESET FLAG2|byte|map<br/>0:Reboot receiver<br/>1:Clear filesystem, reset unit to default configuration and reboot receiver<br/>2:Clear RAM and reboot receiver<br/>3:Factory reset|-|Reset flag|
+
+### Activate Settings
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SYSTEM FILE INDEX|short|range [0:100]|-|File index|
 
 
 
