@@ -111,7 +111,7 @@ Each record/item has a fixed format with value constraints and they are describe
 ### GPS SV selection 
 
 |item name|type|constraint|default value|description|
-|-|-|-|-|-|
+|------------|-|-|-|-|
 |SV SELECTION|array[32]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..31]: 0|Enable/disable SV|
 
 ### GLONASS SV selection 
@@ -123,25 +123,25 @@ Each record/item has a fixed format with value constraints and they are describe
 ### IRNSS SV selection 
 
 |item name|type|constraint|default value|description|
-|-|-|-|-|-|
+|------------|-|-|-|-|
 |SV SELECTION|array[14]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..13]: 0|Enable/disable SV|
 
 ### QZSS SV selection 
 
 |item name|type|constraint|default value|description|
-|-|-|-|-|-|
+|------------|-|-|-|-|
 |SV SELECTION|array[10]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0,1,2,6]: 0<br/>[3,4,5,7,8,9]: 1|Enable/disable SV|
 
 ### GALILEO SV selection 
 
 |item name|type|constraint|default value|description|
-|-|-|-|-|-|
+|------------|-|-|-|-|
 |SV SELECTION|array[36]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..35]: 0|Enable/disable SV|
 
 ### BEIDOU SV selection 
 
 |item name|type|constraint|default value|description|
-|-|-|-|-|-|
+|------------|-|-|-|-|
 |SV SELECTION|array[63]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..62]: 0|Enable/disable SV|
 
 ### Output Message
@@ -188,7 +188,7 @@ Each record/item has a fixed format with value constraints and they are describe
 ### Activate Settings
 
 |item name|type|constraint|default value|description|
-|-|-|-|-|-|
+|---------|-|-|-|-|
 |SYSTEM FILE INDEX|short|range [0:100]|-|File index|
 
 
