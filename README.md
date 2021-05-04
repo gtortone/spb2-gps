@@ -57,7 +57,7 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 
 |item name|type|constraint|default value|description|
 |-|-|-|-|-|
-|SV SELECTION|array[10]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..9]: 0|Enable/disable SV|
+|SV SELECTION|array[10]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0,1,2,6]: 0<br/>[3,4,5,7,8,9]: 1|Enable/disable SV|
 
 ### GALILEO SV selection 
 
@@ -70,6 +70,14 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 |item name|type|constraint|default value|description|
 |-|-|-|-|-|
 |SV SELECTION|array[63]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..62]: 0|Enable/disable SV|
+
+### Output Message
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|OUTPUT MESSAGE TYPE|byte|map<br/>6:NMEA_GGA<br/>7:NMEA_GGK<br/>8:NMEA_ZDA<br/>11:1PPS<br/>12:NMEA_VTG<br/>13:NMEA_GST<br/>14:NMEA_PJK<br/>15:NMEA_PJT<br/>16:NMEA_VGK<br/>17:NMEA_VHD<br/>18:NMEA_GSV<br/>19:NMEA_TSN<br/>20:NMEA_TSS<br/>21:NMEA_PRC<br/>22:NMEA_REF<br/>23:NMEA_GGK_SYNC<br/>29:NMEA_AVR<br/>31:NMEA_HDT<br/>32:NMEA_ROT<br/>33:NMEA_ADV<br/>34:NMEA_PIO<br/>35:NMEA_BETA<br/>37:NMEA_VRSGGA<br/>38:NMEA_GSA<br/>40:NMEA_RMC<br/>41:NMEA_BPQ<br/>44:NMEA_GLL<br/>45:NMEA_GRS<br/>47:NMEA_LDG|-|Type of message or packet|
+
+
 
 
 
