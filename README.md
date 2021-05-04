@@ -31,7 +31,7 @@ Each record/item has a fixed format with value constraints and they are describe
 ### Value types
 
 |type name|number of bytes|
-|-|-|
+|---------|---------------|
 |char|1|
 |byte|1|
 |short|2|
