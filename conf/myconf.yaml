@@ -1,0 +1,38 @@
+--- 
+- record: Activate Settings
+  SYSTEM FILE INDEX: 0
+
+- record: General Controls
+  ELEVATION MASK: 55
+  PDOP MASK: 12
+  RTK POSITIONING MODE: 1
+  #POSITIONING SOLUTION SELECTION: 44
+
+- record: Serial Port
+  SERIAL PORT INDEX: "COM1"
+  BAUD RATE: "19200"
+  PARITY: 0
+
+- record: Antenna
+  ANTENNA TYPE: "AV59"
+
+- record: PPS Control
+  1PPS CONTROL: 1
+  PULSE WIDTH: 8000
+
+- record: Event Control
+  EVENT1 CONTROL: 0
+  EVENT2 CONTROL: 0
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "NMEA_GGA"
+  PORT INDEX: "COM2"
+  FREQUENCY: "off"
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "1PPS"
+  PORT INDEX: "COM2"
+  FREQUENCY: "off"
+
+#- record: Reset
+#  RESET FLAG2: 0

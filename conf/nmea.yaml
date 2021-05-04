@@ -1,0 +1,27 @@
+--- 
+- record: General Controls
+  ELEVATION MASK: 55
+  PDOP MASK: 12
+  RTK POSITIONING MODE: 1
+  POSITIONING SOLUTION SELECTION: 44
+
+- record: Serial Port
+  SERIAL PORT INDEX: "COM1"
+  BAUD RATE: "19200"
+  PARITY: 0
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "NMEA_GGA"
+  PORT INDEX: "COM1"
+  FREQUENCY: "2s"
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "NMEA_GGA"
+  PORT INDEX: "COM2"
+  FREQUENCY: "2s"
+
+- record: Output Message
+  OUTPUT MESSAGE TYPE: "1PPS"
+  PORT INDEX: "COM2"
+  FREQUENCY: "1s"
+

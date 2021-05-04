@@ -1,0 +1,1397 @@
+[
+   {
+      "name": "General Controls",
+      "commandCode": 100,
+      "type": 1,
+      "item": [
+         {
+            "name": "ELEVATION MASK",
+            "dataType": "byte",
+            "position": 2,
+            "width": 1,
+            "description": "Elevation mask in degrees (0-90)",
+            "defaultValue": 0,
+            "constraint": "range",
+            "minValue": 0,
+            "maxValue": 90
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 3,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "PDOP MASK",
+            "dataType": "byte",
+            "position": 4,
+            "width": 1,
+            "description": "Position Dilution of Precision Mask (0-255)",
+            "defaultValue": 99,
+            "constraint": "range",
+            "minValue": 0,
+            "maxValue": 255
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 5,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 6,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RTK POSITIONING MODE",
+            "dataType": "byte",
+            "position": 7,
+            "width": 1,
+            "description": "RTK positioning mode",
+            "defaultValue": 1,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Synchronous"
+               },
+               {
+                  "value": 1,
+                  "description": "Low latency"
+               }
+            ]
+         },
+         {
+            "name": "POSITIONING SOLUTION SELECTION",
+            "dataType": "byte",
+            "position": 8,
+            "width": 1,
+            "description": "Controls use of DGPS and RTK solutions",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Use best available solution"
+               },
+               {
+                  "value": 1,
+                  "description": "Produce DGPS and autonomous solutions"
+               },
+               {
+                  "value": 2,
+                  "description": "Produce DGPS, RTK float and autonomous solutions"
+               },
+               {
+                  "value": 3,
+                  "description": "Produce RTK fix, DGPS and Autonomous solutions"
+               }
+            ] 
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 9,
+            "width": 1,
+            "description": "Reserved (set to 255)",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 10,
+            "width": 1,
+            "description": "Reserved (set to 255)",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 11, 
+            "width": 1,
+            "description": "Reserved (set to 255)",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 12,
+            "width": 1,
+            "description": "Reserved (set to 255)",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 13,
+            "width": 1,
+            "description": "Reserved (set to 255)",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 14,
+            "width": 1,
+            "description": "Reserved (set to 255)",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 15,
+            "width": 1,
+            "description": "Reserved (set to 255)",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "float",
+            "position": 16,
+            "width": 4,
+            "description": "Reserved (set to 0.3)",
+            "defaultValue": 0.3,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "float",
+            "position": 20,
+            "width": 4,
+            "description": "Reserved (set to 0.3)",
+            "defaultValue": 0.3,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 24,
+            "width": 1,
+            "description": "Reserved (set to 1)",
+            "defaultValue": 1,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 25,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "DGNSS GPS CORRECTION AGE",
+            "dataType": "short",
+            "position": 26,
+            "width": 2,
+            "description": "Maximum age of correction for GPS in DGNSS solutions (1-300)",
+            "defaultValue": 60,
+            "constraint": "range",
+            "minValue": 1,
+            "maxValue": 300 
+         },
+         {
+            "name": "DGNSS GLONASS CORRECTION AGE",
+            "dataType": "short",
+            "position": 28,
+            "width": 2,
+            "description": "Maximum age of correction for GLONASS in DGNSS solutions (1-300)",
+            "defaultValue": 60,
+            "constraint": "range",
+            "minValue": 1,
+            "maxValue": 300 
+         },
+         {
+            "name": "DGNSS GALILEO CORRECTION AGE",
+            "dataType": "short",
+            "position": 30,
+            "width": 2,
+            "description": "Maximum age of correction for GALILEO in DGNSS solutions (1-300)",
+            "defaultValue": 60,
+            "constraint": "range",
+            "minValue": 1,
+            "maxValue": 300 
+         },
+         {
+            "name": "DGNSS BEIDOU CORRECTION AGE",
+            "dataType": "short",
+            "position": 32,
+            "width": 2,
+            "description": "Maximum age of correction for BEIDOU in DGNSS solutions (1-300)",
+            "defaultValue": 60,
+            "constraint": "range",
+            "minValue": 1,
+            "maxValue": 300 
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 34, 
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "GLONASS CORRECTIONS DATUM",
+            "dataType": "byte",
+            "position": 35,
+            "width": 1,
+            "description": "Glonass datum for RTCM2 corrections",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "PZ90"
+               },
+               {
+                  "value": 1,
+                  "description": "PZ90.02"
+               }
+            ]
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 36,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "AUTONOMOUS DIFFERENTIAL ENGINE MODE",
+            "dataType": "byte",
+            "position": 37,
+            "width": 1,
+            "description": "Filter selection",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "least squares"
+               },
+               {
+                  "value": 1,
+                  "description": "Kalman filter"
+               },
+               {
+                  "value": 2,
+                  "description": "Kalman filter with SBAS+"
+               }
+            ]
+         },
+         {
+            "name": "RECEIVER MOTION",
+            "dataType": "byte",
+            "position": 38,
+            "width": 1,
+            "description": "Receiver motion",
+            "defaultValue": 11,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 33,
+                  "description": "Static"
+               },
+               {
+                  "value": 0,
+                  "description": "Kinematic"
+               },
+               {
+                  "value": 1,
+                  "description": "Human portable"
+               },
+               {
+                  "value": 2,
+                  "description": "Mapping vehicle"
+               },
+               {
+                  "value": 3,
+                  "description": "Off-road vehicle"
+               },
+               {
+                  "value": 4,
+                  "description": "Heavy equipment"
+               },
+               {
+                  "value": 5,
+                  "description": "Farm equipment"
+               },
+               {
+                  "value": 6,
+                  "description": "Airborne rotor"
+               },
+               {
+                  "value": 7,
+                  "description": "Airborne fixed wing"
+               },
+               {
+                  "value": 8,
+                  "description": "Marine"
+               },
+               {
+                  "value": 9,
+                  "description": "Rail"
+               },
+               {
+                  "value": 11,
+                  "description": "Automotive"
+               }
+            ]
+         },
+         {
+            "name": "UNKNOWN",
+            "dataType": "byte",
+            "position": 39,
+            "width": 1,
+            "description": "Unknown",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "UNKNOWN",
+            "dataType": "byte",
+            "position": 40,
+            "width": 1,
+            "description": "Unknown",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RTK PROPAGATION LIMIT",
+            "dataType": "byte",
+            "position": 41,
+            "width": 1,
+            "description": "RTK propagation limit",
+            "defaultValue": 20,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 10,
+                  "tag": "10",
+                  "description": "10 seconds"
+               },
+               {
+                  "value": 20,
+                  "tag": "20",
+                  "description": "20 seconds"
+               },
+               {
+                  "value": 40,
+                  "tag": "40",
+                  "description": "40 seconds"
+               },
+               {
+                  "value": 60,
+                  "tag": "60",
+                  "description": "60 seconds"
+               },
+               {
+                  "value": 120,
+                  "tag": "120",
+                  "description": "120 seconds"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Serial Port",
+      "commandCode": 100,
+      "type": 2,
+      "item" : [
+         {
+            "name": "SERIAL PORT INDEX",
+            "dataType": "byte",
+            "position": 2,
+            "width": 1,
+            "description": "The number of serial port to configure",
+            "policy": "mandatory",
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "tag": "COM1",
+                  "description": "Serial port COM1"
+               },
+               {
+                  "value": 1,
+                  "tag": "COM2",
+                  "description": "Serial port COM2"
+               }
+            ]
+         },
+         {
+            "name": "BAUD RATE",
+            "dataType": "byte",
+            "position": 3,
+            "width": 1,
+            "description": "Data transmission rate",
+            "defaultValue": 7,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "tag": "9600",
+                  "description": "9600 baud"
+               },
+               {
+                  "value": 1,
+                  "tag": "2400",
+                  "description": "2400 baud"
+               },
+               {
+                  "value": 2,
+                  "tag": "4800",
+                  "description": "4800 baud"
+               },
+               {
+                  "value": 4,
+                  "tag": "19200",
+                  "description": "19200 baud"
+               },
+               {
+                  "value": 5,
+                  "tag": "38400",
+                  "description": "38400 baud"
+               },
+               {
+                  "value": 6,
+                  "tag": "57600",
+                  "description": "57600 baud"
+               },
+               {
+                  "value": 7,
+                  "tag": "115200",
+                  "description": "115200 baud"
+               },
+               {
+                  "value": 8,
+                  "tag": "300",
+                  "description": "300 baud"
+               },
+               {
+                  "value": 9,
+                  "tag": "600",
+                  "description": "600 baud"
+               },
+               {
+                  "value": 10,
+                  "tag": "1200",
+                  "description": "1200 baud"
+               },
+               {
+                  "value": 11,
+                  "tag": "230000",
+                  "description": "230000 baud"
+               },
+               {
+                  "value": 12,
+                  "tag": "460000",
+                  "description": "460000 baud"
+               }
+            ]
+         },
+         {
+            "name": "PARITY",
+            "dataType": "byte",
+            "position": 4,
+            "width": 1,
+            "description": "Parity in transmission",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "No parity"
+               },
+               {
+                  "value": 1,
+                  "description": "Odd parity"
+
+               },
+               {
+                  "value": 2,
+                  "description": "Even parity"
+               }
+            ]
+         },
+         {
+            "name": "FLOW CONTROL",
+            "dataType": "byte",
+            "position": 5,
+            "width": 1,
+            "description": "Flow control",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "No flow control"
+               },
+               {
+                  "value": 1,
+                  "description": "CTS flow control"
+
+               }
+            ]
+         },
+         {
+            "name": "UNKNOWN",
+            "dataType": "byte",
+            "position": 6,
+            "width": 1,
+            "description": "Unknown",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         }
+      ]
+   },
+   {
+      "name": "GPS SV selection",
+      "commandCode": 100,
+      "type": 6,
+      "item" : [
+         {
+            "name": "SV SELECTION",
+            "dataType": "array",
+            "position": 2,
+            "width": 32,
+            "description": "Enable/disable SV",
+            "defaultValue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Heed health"
+               },
+               {
+                  "value": 1,
+                  "description": "Disable satellite"
+               },
+               {
+                  "value": 2,
+                  "description": "Enable satellite regardless good or bad health"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "GLONASS SV selection",
+      "commandCode": 100,
+      "type": 55,
+      "item" : [
+         {
+            "name": "SV SELECTION",
+            "dataType": "array",
+            "position": 2,
+            "width": 24,
+            "description": "Enable/disable SV",
+            "defaultValue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Heed health"
+               },
+               {
+                  "value": 1,
+                  "description": "Disable satellite"
+               },
+               {
+                  "value": 2,
+                  "description": "Enable satellite regardless good or bad health"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "IRNSS SV selection",
+      "commandCode": 100,
+      "type": 100,
+      "item" : [
+         {
+            "name": "SV SELECTION",
+            "dataType": "array",
+            "position": 2,
+            "width": 14,
+            "description": "Enable/disable SV",
+            "defaultValue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Heed health"
+               },
+               {
+                  "value": 1,
+                  "description": "Disable satellite"
+               },
+               {
+                  "value": 2,
+                  "description": "Enable satellite regardless good or bad health"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "QZSS SV selection",
+      "commandCode": 100,
+      "type": 95,
+      "item" : [
+         {
+            "name": "SV SELECTION",
+            "dataType": "array",
+            "position": 2,
+            "width": 10,
+            "description": "Enable/disable SV",
+            "defaultValue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Heed health"
+               },
+               {
+                  "value": 1,
+                  "description": "Disable satellite"
+               },
+               {
+                  "value": 2,
+                  "description": "Enable satellite regardless good or bad health"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "GALILEO SV selection",
+      "commandCode": 100,
+      "type": 79,
+      "item" : [
+         {
+            "name": "SV SELECTION",
+            "dataType": "array",
+            "position": 2,
+            "width": 36,
+            "description": "Enable/disable SV",
+            "defaultValue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                             0, 0, 0, 0],
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Heed health"
+               },
+               {
+                  "value": 1,
+                  "description": "Disable satellite"
+               },
+               {
+                  "value": 2,
+                  "description": "Enable satellite regardless good or bad health"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "BEIDOU SV selection",
+      "commandCode": 100,
+      "type": 80,
+      "item" : [
+         {
+            "name": "SV SELECTION",
+            "dataType": "array",
+            "position": 2,
+            "width": 63,
+            "description": "Enable/disable SV",
+            "defaultValue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Heed health"
+               },
+               {
+                  "value": 1,
+                  "description": "Disable satellite"
+               },
+               {
+                  "value": 2,
+                  "description": "Enable satellite regardless good or bad health"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Output Message",
+      "commandCode": 100,
+      "type": 7,
+      "item": [
+         {
+            "name": "OUTPUT MESSAGE TYPE",
+            "dataType": "byte",
+            "position": 2,
+            "width": 1,
+            "description": "Type of message or packet",
+            "policy": "mandatory",
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 6,
+                  "tag": "NMEA_GGA",
+                  "description": "NMEA_GGA"
+               },
+               {
+                  "value": 7,
+                  "tag": "NMEA_GGK",
+                  "description": "NMEA_GGK"
+               },
+               {
+                  "value": 8,
+                  "tag": "NMEA_ZDA",
+                  "description": "NMEA_ZDA"
+               },
+               {
+                  "value": 11,
+                  "tag": "1PPS",
+                  "description": "1PPS"
+               },
+               {
+                  "value": 12,
+                  "tag": "NMEA_VTG",
+                  "description": "NMEA_VTG"
+               },
+               {
+                  "value": 13,
+                  "tag": "NMEA_GST",
+                  "description": "NMEA_GST"
+               },
+               {
+                  "value": 14,
+                  "tag": "NMEA_PJK",
+                  "description": "NMEA_PJK"
+               },
+               {
+                  "value": 15,
+                  "tag": "NMEA_PJT",
+                  "description": "NMEA_PJT"
+               },
+               {
+                  "value": 16,
+                  "tag": "NMEA_VGK",
+                  "description": "NMEA_VGK"
+               },
+               {
+                  "value": 17,
+                  "tag": "NMEA_VHD",
+                  "description": "NMEA_VHD"
+               },
+               {
+                  "value": 18,
+                  "tag": "NMEA_GSV",
+                  "description": "NMEA_GSV"
+               },
+               {
+                  "value": 19,
+                  "tag": "NMEA_TSN",
+                  "description": "NMEA_TSN"
+               },
+               {
+                  "value": 20,
+                  "tag": "NMEA_TSS",
+                  "description": "NMEA_TSS"
+               },
+               {
+                  "value": 20,
+                  "tag": "NMEA_TSS",
+                  "description": "NMEA_TSS"
+               },
+               {
+                  "value": 21,
+                  "tag": "NMEA_PRC",
+                  "description": "NMEA_PRC"
+               },
+               {        
+                  "value": 22,
+                  "tag": "NMEA_REF",
+                  "description": "NMEA_REF"
+               },
+               {
+                  "value": 23,
+                  "tag": "NMEA_GGK_SYNC",
+                  "description": "NMEA_GGK_SYNC"
+               },
+               {
+                  "value": 29,
+                  "tag": "NMEA_AVR",
+                  "description": "NMEA_AVR"
+               },
+               {
+                  "value": 31,
+                  "tag": "NMEA_HDT",
+                  "description": "NMEA_HDT"
+               },
+               {
+                  "value": 32,
+                  "tag": "NMEA_ROT",
+                  "description": "NMEA_ROT"
+               },
+               {
+                  "value": 33,
+                  "tag": "NMEA_ADV",
+                  "description": "NMEA_ADV"
+               },
+               {
+                  "value": 34,
+                  "tag": "NMEA_PIO",
+                  "description": "NMEA_PIO"
+               },
+               {
+                  "value": 35,
+                  "tag": "NMEA_BETA",
+                  "description": "NMEA_BETA"
+               },
+               {
+                  "value": 37,
+                  "tag": "NMEA_VRSGGA",
+                  "description": "NMEA_VRSGGA"
+               },
+               {
+                  "value": 38,
+                  "tag": "NMEA_GSA",
+                  "description": "NMEA_GSA"
+               },
+               {
+                  "value": 40,
+                  "tag": "NMEA_RMC",
+                  "description": "NMEA_RMC"
+               },
+               {
+                  "value": 41,
+                  "tag": "NMEA_BPQ",
+                  "description": "NMEA_BPQ"
+               },
+               {
+                  "value": 44,
+                  "tag": "NMEA_GLL",
+                  "description": "NMEA_GLL"
+               },
+               {
+                  "value": 45,
+                  "tag": "NMEA_GRS",
+                  "description": "NMEA_GRS"
+               },
+               {
+                  "value": 47,
+                  "tag": "NMEA_LDG",
+                  "description": "NMEA_LDG"
+               }
+            ]
+            
+         },
+         {
+            "name": "PORT INDEX",
+            "dataType": "byte",
+            "position": 3,
+            "width": 1,
+            "description": "Port number",
+            "policy": "mandatory",
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "tag": "COM1",
+                  "description": "Serial port COM1"
+               },
+               {
+                  "value": 1,
+                  "tag": "COM2",
+                  "description": "Serial port COM2"
+               }
+            ]
+         },
+         {
+            "name": "FREQUENCY",
+            "dataType": "byte",
+            "position": 4,
+            "width": 1,
+            "description": "Port number",
+            "policy": "mandatory",
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "tag": "off",
+                  "description": "Off"
+               },
+               {
+                  "value": 1,
+                  "description": "10 Hz"
+               },
+               {
+                  "value": 2,
+                  "description": "5 Hz"
+               },
+               {
+                  "value": 3,
+                  "tag": "1s",
+                  "description": "1 Hz"
+               },
+               {
+                  "value": 4,
+                  "tag": "2s",
+                  "description": "2 seconds"
+               },
+               {
+                  "value": 5,
+                  "tag": "5s",
+                  "description": "5 seconds"
+               },
+               {
+                  "value": 6,
+                  "tag": "10s",
+                  "description": "10 seconds"
+               },
+               {
+                  "value": 7,
+                  "tag": "30s",
+                  "description": "30 seconds"
+               },
+               {
+                  "value": 8,
+                  "tag": "1m",
+                  "description": "1 minute"
+               },
+               {
+                  "value": 9,
+                  "tag": "5m",
+                  "description": "5 minutes"
+               },
+               {
+                  "value": 10,
+                  "tag": "10m",
+                  "description": "10 minutes"
+               },
+               {
+                  "value": 11,
+                  "description": "2 Hz"
+               },
+               {
+                  "value": 12,
+                  "tag": "15s",
+                  "description": "15 seconds"
+               },
+               {
+                  "value": 13,
+                  "description": "20 Hz"
+               },
+               { 
+                  "value": 15,
+                  "description": "50 Hz"
+               }
+            ]
+ 
+         },
+         {
+            "name": "OFFSET",
+            "dataType": "byte",
+            "position": 5,
+            "width": 1,
+            "description": "Offset in seconds from scheduled output rate",
+            "defaultValue": 0,
+            "constraint": "range",
+            "minValue": 0,
+            "maxValue": 255
+         },
+         {
+            "name": "UNKNOWN",
+            "dataType": "array",
+            "position": 6,
+            "width": 11,
+            "description": "Unknown",
+            "defaultValue": [72, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0],
+            "constraint": "fixed"
+         }
+      ]
+   },
+   {
+      "name": "Antenna",
+      "commandCode": 100,
+      "type": 8,
+      "item": [
+         {
+            "name": "ANTENNA HEIGHT",
+            "dataType": "double",
+            "position": 2,
+            "width": 8,
+            "description": "Vertical height of antenna in meters",
+            "defaultValue": 0,
+            "constraint": "range",
+            "minValue": 0,
+            "maxValue": 1000
+         },
+         {
+            "name": "ANTENNA TYPE",
+            "dataType": "short",
+            "position": 10,
+            "width": 2,
+            "description": "Type of antenna connected to the receiver",
+            "defaultValue": 309,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 85,
+                  "description": "Zephyr (KZ)"
+               },
+               {
+                  "value": 86,
+                  "description": "Zephyr Geodetic (GZ)"
+               },
+               {
+                  "value": 184,
+                  "description": "Zephyr - Model 2 (KS)"
+               },
+               {        
+                  "value": 185,
+                  "description": "Zephyr Geodetic 2 (GS)"
+               },
+               {
+                  "value": 266,
+                  "description": "AG25 (KT)"
+               },
+               {
+                  "value": 309,
+                  "tag": "AV59",
+                  "description": "AV59 (FA)"
+               },
+               {  
+                  "value": 349,
+                  "description": "AV33 (M0)"
+               },
+               {
+                  "value": 403,
+                  "description": "AV34 (M1)"
+               },
+               {
+                  "value": 404,
+                  "description": "AV37 (M2)"
+               },
+               {
+                  "value": 406,
+                  "description": "LV59 (M3)"
+               }
+               
+            ]
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 12,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "MEASUREMENT METHOD",
+            "dataType": "byte",
+            "position": 13,
+            "width": 1,
+            "description": "Measurement method",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Bottom of antenna mount"
+               },
+               {
+                  "value": 255,
+                  "description": "Antenna phase center"
+               }
+            ]
+         },
+         {
+            "name": "ANTENNA SERIAL NUMBER",
+            "dataType": "char",
+            "position": 14,
+            "width": 32,
+            "description": "Antenna serial number",
+            "defaultValue": "",
+            "constraint": "flstring"
+         }
+      ]
+   },
+   {
+      "name": "PPS Control",
+      "commandCode": 100,
+      "type": 9,
+      "item": [
+         {
+            "name": "DEVICE TYPE",
+            "dataType": "byte",
+            "position": 2,
+            "width": 1,
+            "description": "PPS device type",
+            "defaultValue": 2,
+            "constraint": "fixed"
+         },
+         {
+            "name": "1PPS CONTROL",
+            "dataType": "byte",
+            "position": 3,
+            "width": 1,
+            "description": "Enable or disable 1PPS output",
+            "defaultValue": 1,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "1PPS output off"
+               },
+               {
+                  "value": 1,
+                  "description": "1PPS output on"
+               }
+            ]
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 4,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "ALWAYS ON",
+            "dataType": "byte",
+            "position": 5,
+            "width": 1,
+            "description": "Enable or disable 1PPS always on output",
+            "defaultValue": 1,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "1PPS output only when time is valid"
+               },
+               {
+                  "value": 1,
+                  "description": "1PPS output is always on"
+               }
+            ]
+         },
+         {
+            "name": "ENABLE WIDTH",
+            "dataType": "byte",
+            "position": 6,
+            "width": 1,
+            "description": "Enable or disable width of 1PPS signal",
+            "defaultValue": 1,
+            "constraint": "fixed"
+         },
+         {
+            "name": "PULSE WIDTH",
+            "dataType": "integer",
+            "position": 7,
+            "width": 4,
+            "description": "Set width of 1PPS signal in ns",
+            "defaultValue": 1000,
+            "constraint": "range",
+            "minValue": 160,
+            "maxValue": 10485600
+         }
+      ]
+   },
+   {
+      "name": "Event Control",
+      "commandCode": 100,
+      "type": 9,
+      "item": [
+         {
+            "name": "DEVICE TYPE",
+            "dataType": "byte",
+            "position": 1,
+            "width": 1,
+            "description": "Event device type",
+            "defaultValue": 1,
+            "constraint": "fixed"
+         },
+         {
+            "name": "EVENT1 CONTROL",
+            "dataType": "byte",
+            "position": 3,
+            "width": 1,
+            "description": "Enable or disable event #1 marker",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Event marker #1 disabled"
+               },
+               {
+                  "value": 1,
+                  "description": "Event marker #1 enabled"
+               }
+            ]
+         },
+         {
+            "name": "EVENT1 TRIGGER SENSE",
+            "dataType": "byte",
+            "position": 4,
+            "width": 1,
+            "description": "Event #1 trigger polarity",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Positive trigger edge"
+               },
+               {
+                  "value": 1,
+                  "description": "Negative trigger edge"
+               }
+            ]
+         },
+         {
+            "name": "EVENT2 CONTROL",
+            "dataType": "byte",
+            "position": 5,
+            "width": 1,
+            "description": "Enable or disable event #2 marker",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Event marker #2 disabled"
+               },
+               {
+                  "value": 1,
+                  "description": "Event marker #2 enabled"
+               }
+            ]
+         },
+         {
+            "name": "EVENT2 TRIGGER SENSE",
+            "dataType": "byte",
+            "position": 6,
+            "width": 1,
+            "description": "Event #2 trigger polarity",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Positive trigger edge"
+               },
+               {
+                  "value": 1,
+                  "description": "Negative trigger edge"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Reset",
+      "commandCode": 88,
+      "item": [
+         {
+            "name": "RESET FLAG1",
+            "dataType": "byte",
+            "position": 2,
+            "width": 1,
+            "description": "Reset flag",
+            "defaultValue": 255,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESET FLAG2",
+            "dataType": "byte",
+            "position": 3,
+            "width": 1,
+            "description": "Reset flag",
+            "policy": "mandatory",
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Reboot receiver"
+               },
+               {
+                  "value": 1,
+                  "description": "Clear filesystem, reset unit to default configuration and reboot receiver"
+               },
+               {
+                  "value": 2,
+                  "description": "Clear RAM and reboot receiver"
+               },
+               {
+                  "value": 3,
+                  "description": "Factory reset"
+               }
+            ] 
+         },
+         {
+            "name": "RESET STRING",
+            "dataType": "char",
+            "position": 4,
+            "width": 5,
+            "description": "Reset string",
+            "defaultValue": "RESET",
+            "constraint": "fixed"
+         }
+      ]
+   },
+   {
+      "name": "Activate Settings",
+      "commandCode": 109,
+      "item": [
+         {
+            "name": "SYSTEM FILE INDEX",
+            "dataType": "short",
+            "position": 2,
+            "width": 2,
+            "description": "File index",
+            "policy": "mandatory",
+            "constraint": "range",
+            "minValue": 0,
+            "maxValue": 100
+         }
+      ]
+   }
+]
