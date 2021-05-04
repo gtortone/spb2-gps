@@ -670,7 +670,7 @@
             "position": 2,
             "width": 10,
             "description": "Enable/disable SV",
-            "defaultValue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "defaultValue": [0, 0, 0, 1, 1, 1, 0, 1, 1, 1],
             "constraint": "map",
             "map": [
                {
