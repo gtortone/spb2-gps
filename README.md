@@ -47,7 +47,7 @@ Each record/item has a fixed format with value constraints and they are describe
 |-|-|
 |fixed|fixed value|
 |range|range of values (min,max)|
-|map|set of (key,value) entries|
+|map|set of (key,value) entries<br/>for some items a map value can be specified with 'tag' instead of using key|
 
 
 ## Example of YAML configuration file
