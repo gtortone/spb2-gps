@@ -80,6 +80,18 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 |FREQUENCY|byte|map<br/>0:Off<br/>1:10 Hz<br/>2:5 Hz<br/>3:1 Hz<br/>4:2 seconds<br/>5:5 seconds<br/>6:10 seconds<br/>7:30 seconds<br/>8:1 minute<br/>9:5 minutes<br/>10:10 minutes<br/>11:2 Hz<br/>12:15 seconds<br/>13:20 Hz<br/>15:50 Hz<br/>|-|Frequency|
 |OFFSET|byte|range [0:255]|0|Offset in seconds from scheduled output rate|
 
+### Antenna
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|ANTENNA HEIGHT|double|range [0:1000]|0|Vertical height of antenna in meters|
+|ANTENNA TYPE|short|map<br/>85:Zephyr (KZ)<br/>86:Zephyr Geodetic (GZ)<br/>184:Zephyr - Model 2 (KS)<br/>185:Zephyr Geodetic 2 (GS)<br/>266:AG25 (KT)<br/>309:AV59 (FA)<br/>349:AV33 (M0)<br/>403:AV34 (M1)<br/>404:AV37 (M2)<br/>406:LV59 (M3)|309|Type of antenna connected to the receiver|
+|MEASUREMENT METHOD|byte|map<br/>0:Bottom of antenna mount<br/>255:Antenna phase center|0|Measurement method|
+|ANTENNA SERIAL NUMBER|char|flstring|-|Antenna serial number|
+
+
+
+
 
 
 
