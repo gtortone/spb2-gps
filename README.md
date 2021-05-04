@@ -33,9 +33,43 @@ parameters (items) to configure. Configuration items will be encoded and sent by
 |SERIAL PORT INDEX|byte|map<br/>0:Serial port COM1<br/>1:Serial port COM2|-|The number of serial port to configure|
 |BAUD RATE|byte|map<br/>0:9600 baud<br/>1:2400 baud<br/>2:4800 baud<br/>4:19200 baud<br/>5:38400 baud<br/>6:57600 baud<br/>7:115200 baud<br/>8:300 baud<br/>9:600 baud<br/>10:1200<br/>11:230000 baud<br/>12:460000 baud|7|Data transmission rate|
 |PARITY|byte|map<br/>0:No parity<br/>1:Odd parity<br/>2:Even parity|0|Parity in transmission|
+|FLOW CONTROL|byte|map<br/>0:No flow control<br/>1:CTS flow control|0|Flow control|
 
+### GPS SV selection 
 
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SV SELECTION|array[32]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..31]: 0|Enable/disable SV|
 
+### GLONASS SV selection 
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SV SELECTION|array[24]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..23]: 0|Enable/disable SV|
+
+### IRNSS SV selection 
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SV SELECTION|array[14]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..13]: 0|Enable/disable SV|
+
+### QZSS SV selection 
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SV SELECTION|array[10]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..9]: 0|Enable/disable SV|
+
+### GALILEO SV selection 
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SV SELECTION|array[36]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..35]: 0|Enable/disable SV|
+
+### BEIDOU SV selection 
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|SV SELECTION|array[63]|map<br/>0:Heed health<br/>1:Disable satellite<br/>2:Enable satellite regardless good or bad health|[0..62]: 0|Enable/disable SV|
 
 
 
