@@ -1152,6 +1152,132 @@
       ]
    },
    {
+      "name": "Vector Antenna",
+      "commandCode": 100,
+      "type": 78,
+      "item": [
+         {
+            "name": "VERSION",
+            "dataType": "byte",
+            "position": 2,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "byte",
+            "position": 3,
+            "width": 1,
+            "description": "Reserved (set to 0)",
+            "defaultValue": 0,
+            "constraint": "fixed"
+         },
+         {
+            "name": "ANTENNA HEIGHT",
+            "dataType": "double",
+            "position": 4,
+            "width": 8,
+            "description": "Vertical height of antenna in meters",
+            "defaultValue": 0,
+            "constraint": "range",
+            "minValue": 0,
+            "maxValue": 1000
+         },
+         {
+            "name": "ANTENNA SERIAL NUMBER",
+            "dataType": "char",
+            "position": 12,
+            "width": 32,
+            "description": "Antenna serial number",
+            "defaultValue": "",
+            "constraint": "flstring"
+         },
+         {
+            "name": "ANTENNA TYPE",
+            "dataType": "short",
+            "position": 44,
+            "width": 2,
+            "description": "Type of antenna connected to the receiver",
+            "defaultValue": 309,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 85,
+                  "description": "Zephyr (KZ)"
+               },
+               {
+                  "value": 86,
+                  "description": "Zephyr Geodetic (GZ)"
+               },
+               {
+                  "value": 184,
+                  "description": "Zephyr - Model 2 (KS)"
+               },
+               {        
+                  "value": 185,
+                  "description": "Zephyr Geodetic 2 (GS)"
+               },
+               {
+                  "value": 266,
+                  "description": "AG25 (KT)"
+               },
+               {
+                  "value": 309,
+                  "tag": "AV59",
+                  "description": "AV59 (FA)"
+               },
+               {  
+                  "value": 349,
+                  "description": "AV33 (M0)"
+               },
+               {
+                  "value": 403,
+                  "description": "AV34 (M1)"
+               },
+               {
+                  "value": 404,
+                  "description": "AV37 (M2)"
+               },
+               {
+                  "value": 406,
+                  "description": "LV59 (M3)"
+               }
+               
+            ]
+         },
+         {
+            "name": "MEASUREMENT METHOD",
+            "dataType": "byte",
+            "position": 46,
+            "width": 1,
+            "description": "Measurement method",
+            "defaultValue": 0,
+            "constraint": "map",
+            "map": [
+               {
+                  "value": 0,
+                  "description": "Bottom of antenna mount"
+               },
+               {
+                  "value": 255,
+                  "description": "Antenna phase center"
+               }
+            ]
+         },
+         {
+            "name": "RESERVED",
+            "dataType": "array",
+            "position": 47,
+            "width": 5,
+            "description": "Reserved (set to 0)",
+            "defaultValue": [0, 0, 0, 0, 0],
+            "constraint": "fixed"
+         }
+      ]
+   },
+   {
       "name": "PPS Control",
       "commandCode": 100,
       "type": 9,

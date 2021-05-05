@@ -16,6 +16,9 @@
 - record: Antenna
   ANTENNA TYPE: "AV59"
 
+- record: Vector Antenna
+  ANTENNA TYPE: "AV59"
+
 - record: PPS Control
   1PPS CONTROL: 1
   PULSE WIDTH: 8000
