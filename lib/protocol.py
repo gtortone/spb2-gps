@@ -62,6 +62,7 @@ class Constraint(Enum):
 
 ENQ = b'\x05'
 ACK = b'\x06'
+RESET = b'\x00'
 
 class Item:
    def __init__(self, name):
@@ -374,6 +375,10 @@ class SerialChannel:
       except Exception as e:
          print(f"E: error opening serial port {port} - {e}")
          sys.exit(-1)
+
+      if (self.reset() == False):
+         print(f"E: error resetting serial port {port}")
+         sys.exit(-1)
    
    def enquiry(self):
       self.serial.write(ENQ)
@@ -382,9 +387,17 @@ class SerialChannel:
          return True
 
       return False
+
+   def reset(self):
+      for i in range(1,256):
+         self.serial.write(RESET)
+         if (self.enquiry()):
+            return True
+
+      return False 
       
    def sendFrame(self, frame):
-      if (self.enquiry()):
+      if (self.reset()):
          self.serial.write(frame)
          res = self.serial.read(1)
          if (res == b''):
