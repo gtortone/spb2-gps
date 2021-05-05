@@ -162,6 +162,15 @@ Each record/item has a fixed format with value constraints and they are describe
 |```MEASUREMENT METHOD```|byte|map<br/>0:Bottom of antenna mount<br/>255:Antenna phase center|0|Measurement method|
 |```ANTENNA SERIAL NUMBER```|char|flstring[32]|-|Antenna serial number|
 
+### Vector Antenna
+
+|item name|type|constraint|default value|description|
+|-|-|-|-|-|
+|```ANTENNA HEIGHT```|double|range [0:1000]|0|Vertical height of antenna in meters|
+|```ANTENNA TYPE```|short|map<br/>85:Zephyr (KZ)<br/>86:Zephyr Geodetic (GZ)<br/>184:Zephyr - Model 2 (KS)<br/>185:Zephyr Geodetic 2 (GS)<br/>266:AG25 (KT)<br/>309:AV59 (FA)<br/>349:AV33 (M0)<br/>403:AV34 (M1)<br/>404:AV37 (M2)<br/>406:LV59 (M3)|309|Type of antenna connected to the receiver|
+|```MEASUREMENT METHOD```|byte|map<br/>0:Bottom of antenna mount<br/>255:Antenna phase center|0|Measurement method|
+|```ANTENNA SERIAL NUMBER```|char|flstring[32]|-|Antenna serial number|
+
 ### PPS Control
 
 |item name|type|constraint|default value|description|
