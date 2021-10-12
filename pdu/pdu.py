@@ -18,9 +18,9 @@ if len(sys.argv) > 3:
         deviceList = [sys.argv[2]]
     command = sys.argv[3]
 else:
-    print('usage: pdu <bus> <device> on/off/status')
+    print('usage: pdu <bus> <device> on/off/state')
     print(' bus: {can0, can1}')
-    print(' device: { gps1, gps2, hkb, clkb }')
+    print(' device: { gps1, gps2, hkb, clkb, all }')
     sys.exit()
 
 if (busname.lower() not in ['can0', 'can1']):
