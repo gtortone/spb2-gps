@@ -4,23 +4,51 @@ import sys
 import can
 import time
 
+# Number channel for old box
+#channel = {}
+#channel['gps1'] = 7
+#channel['gps2'] = 8
+#channel['clkb'] = 12
+#channel['hkb']  = 13
+#channel['pdm1'] = 0
+#channel['hv1'] =  3
+#channel['pdm2'] = 5
+#channel['hv2'] = 14
+#channel['pdm3'] = 9
+#channel['hv3'] = 6
+#channel['emon3'] = 2
+#channel['emon4'] = 10
+
+# Number channel for new box (FM)
 channel = {}
-channel['gps1'] = 7
-channel['gps2'] = 11
+channel['gps1'] = 10
+channel['gps2'] = 13
 channel['clkb'] = 12
-channel['hkb']  = 13
+channel['hkb']  = 14
+channel['pdm1'] = 7
+channel['hv1'] =  5
+channel['pdm2'] = 15
+channel['hv2'] = 4
+channel['pdm3'] = 6
+channel['hv3'] = 3
+channel['emon3'] = 8
+channel['emon4'] = 0
+channel['amon'] = 9
+channel['led1'] = 11
+channel['led2'] = 1
+channel['lid'] = 2
 
 if len(sys.argv) > 3:
     busname = sys.argv[1]
     if(sys.argv[2] == 'all'):
-        deviceList = ['gps1','gps2','hkb','clkb']
+        deviceList = ['gps1','gps2','hkb','clkb','pdm1','hv1', 'pdm2', 'hv2', 'pdm3', 'hv3', 'emon3', 'emon4',  'amon', 'led1', 'led2', 'lid']
     else:
         deviceList = [sys.argv[2]]
     command = sys.argv[3]
 else:
     print('usage: pdu <bus> <device> on/off/state')
     print(' bus: {can0, can1}')
-    print(' device: { gps1, gps2, hkb, clkb, all }')
+    print(' device: { gps1, gps2, hkb, clkb, pdm1, hv1, pdm2, hv2, pdm3, hv3, emon3, emon4, amon, led1, led2, lid, all }')
     sys.exit()
 
 if (busname.lower() not in ['can0', 'can1']):
@@ -74,4 +102,4 @@ for device in deviceList:
         bus.send(msg)
         print(f'{device} OK')
     except can.CanError:
-        print("E: {device} CAN message not sent")
+        print(f"E: {device} CAN message not sent")
