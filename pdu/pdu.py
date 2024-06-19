@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import os
 import sys
 import can
 import time
@@ -10,7 +11,8 @@ aliases = []
 deviceList = []
 command = ""
 
-f = open("config.json", "r")
+config_file = f"{os.path.dirname(__file__)}/config.json"
+f = open(config_file, "r")
 cfg = json.load(f)
 
 for p in cfg["pdu"]:
