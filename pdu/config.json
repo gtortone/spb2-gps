@@ -1,0 +1,51 @@
+
+{
+   "pdu": [
+      {
+         "alias": "pdu1",
+         "can_address": "0xCF",
+         "channels": {
+            "emon4": { "id": 0 },
+            "led2":  { "id": 1 },
+            "lid":   { "id": 2 },
+            "hv3":   { "id": 3 },
+            "hv2":   { "id": 4 },
+            "hv1":   { "id": 5 },
+            "pdm3":  { "id": 6 },
+            "pdm1":  { "id": 7 },
+            "emon3": { "id": 8 },
+            "amon":  { "id": 9 },
+            "gps1":  { "id": 10 },
+            "led1":  { "id": 11 },
+            "clkb":  { "id": 12 },
+            "gps2":  { "id": 13 },
+            "hkb":   { "id": 14 },
+            "pdm2":  { "id": 15 }
+         }
+      },
+
+      {
+         "alias": "pdu2",
+         "can_address": "0xCE",
+         "channels": {
+            "pdm1":  { "id": 0 },
+            "ch1":   { "id": 1 },
+            "emon3": { "id": 2 },
+            "hv1":   { "id": 3 },
+            "ch4":   { "id": 4 },
+            "pdm2":  { "id": 5 },
+            "hv3":   { "id": 6 },
+            "gps1":  { "id": 7 },
+            "gps2":  { "id": 8 },
+            "pdm3":  { "id": 9 },
+            "emon4": { "id": 10 },
+            "ch11":  { "id": 11 },
+            "clkb":  { "id": 12 },
+            "hkb":   { "id": 13 },
+            "hv2":   { "id": 14 },
+            "ch15":  { "id": 15 }
+         }
+      }
+   ]
+}
+
